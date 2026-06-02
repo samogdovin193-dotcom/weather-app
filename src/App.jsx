@@ -38,7 +38,7 @@ function App() {
       setLocationName(geoData.results[0].name);
 
       const weatherResponse = await fetch(
-        `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&daily=temperature_2m_max,temperature_2m_min,weather_code&timezone=auto`
+        `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current=temperature_2m,wind_speed_10m,weather_code&daily=temperature_2m_max,temperature_2m_min,weather_code&timezone=auto`
       );
 
       const weatherData = await weatherResponse.json();
@@ -91,6 +91,19 @@ function App() {
             marginTop: 20
           }}
         >
+          <div style={{ marginTop: 20, textAlign: "center" }}>
+            <h2>
+              Now in {locationName} {getWeatherIcon(weather.current.weather_code)}
+            </h2>
+
+            <p style={{ fontSize: 22 }}>
+              🌡️ {weather.current.temperature_2m}°C
+            </p>
+
+            <p>
+              💨 Wind: {weather.current.wind_speed_10m} km/h
+            </p>
+          </div>
           <h3 style={{marginBottom: 10 }}>5-Day Forecast</h3>
             <div
               style={{
