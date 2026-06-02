@@ -64,6 +64,10 @@ The app allows users to search for a city and view current weather conditions an
 
 ---
 
+## 🌍 Live Demo
+
+👉 https://weather-app-nine-henna-15.vercel.app/
+
 ## ▶️ How to run locally
 
 ```bash
