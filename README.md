@@ -71,7 +71,7 @@ The app allows users to search for a city and view current weather conditions an
 ## ▶️ How to run locally
 
 ```bash
-git clone https://github.com/your-username/weather-app.git
+git clone https://github.com/samogdovin193-dotcom/weather-app.git
 cd weather-app
 npm install
 npm run dev
